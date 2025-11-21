@@ -26,3 +26,6 @@ add_executable(${LUA_EXECUTABLE} ${LUA_MAIN})
 add_executable(${LUAC_EXECUTABLE} ${LUAC_MAIN})
 target_link_libraries(${LUA_EXECUTABLE} PRIVATE lua_static)
 target_link_libraries(${LUAC_EXECUTABLE} PRIVATE lua_static)
+
+set(LUA_DIR ${CMAKE_CURRENT_SOURCE_DIR} PARENT_SCOPE)
+set(LUA_LIBRARIES lua_static lua_shared PARENT_SCOPE)
